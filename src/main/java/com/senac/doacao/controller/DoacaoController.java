@@ -24,7 +24,7 @@ public class DoacaoController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/obterdoacoesdousuario/{doadorId}")
+    @GetMapping("/obterdoacoesdousuarioporid/{doadorId}")
     public ResponseEntity<List<DoacaoResponseDTO>> obterDoacoesDoUsuario(@PathVariable int doadorId) {
         List<DoacaoResponseDTO> doacoes = doacaoService.listarDoacoesPorDoador(doadorId);
         return ResponseEntity.ok(doacoes);

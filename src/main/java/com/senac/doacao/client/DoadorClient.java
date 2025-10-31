@@ -6,9 +6,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "gabriel", url = "10.136.64.163:8080", path = "/")
+@FeignClient(name = "gabriel", url = "10.136.64.223:8080", path = "api/doador")
 public interface DoadorClient {
 
-    @PostMapping("/api/doador/cadastrardoador")
+    @PostMapping("/cadastrardoador")
     DoadorResponseDTO cadastrarDoador(@RequestBody DoadorRequestDTO doadorRequest);
 }
